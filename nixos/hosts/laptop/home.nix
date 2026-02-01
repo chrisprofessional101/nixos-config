@@ -7,23 +7,23 @@
 ];
  programs.noctalia-shell.enable = true;
  programs.noctalia-shell.systemd.enable = true;
- 
+
  programs.git = {
  enable = true;
  userName = "chrisprofessional101";
- userEmail = "chrisprofessional101@gmai.com"; 
+ userEmail = "chrisprofessional101@gmai.com";
  extraConfig = {
    init.defaultBranch = "main";
-   };  
+   };
 
 };
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "lain";
   home.homeDirectory = "/home/lain";
-  
- 
- 
+
+
+
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -36,15 +36,16 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
 
-  nixpkgs.config.allowUnfree = true;  
+  nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-    
+
     obsidian
     wezterm
     vivaldi
     neovim
     fastfetch
+    krita
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello

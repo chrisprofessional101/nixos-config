@@ -3,7 +3,7 @@
 
 {
   imports =
-    [ 
+    [
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
     ];
@@ -14,10 +14,10 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.initrd.luks.devices."luks-5c5770fc-e41e-4f50-a1ec-29832b9d5050".device = "/dev/disk/by-uuid/5c5770fc-e41e-4f50-a1ec-29832b9d5050";
-  networking.hostName = "nixos"; 
+  networking.hostName = "nixos";
   networking.networkmanager.enable = true;
   hardware.bluetooth.enable = true;
-  services.tuned.enable = true; 
+  services.tuned.enable = true;
   services.upower.enable = true;
   time.timeZone = "America/New_York";
 
@@ -55,20 +55,20 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    
+
   };
 
-  
-  
+
+
   users.users.lain = {
     isNormalUser = true;
     description = "lain";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-     
+
     ];
   };
-  
+
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
@@ -81,16 +81,18 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    
+
     nmap
     alacritty
     fuzzel
     git
-  ];
+    wget
+    unzip
+ ];
 
-  networking.nameservers = [ "1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ]; 
+  networking.nameservers = [ "1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
 
-  
+
 #  services.resolved = {
 #    enable = true;
 #    dnssec = "true";
@@ -98,6 +100,6 @@
 #    fallbackDns = [ "1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
 #    dnsovertls = "true";
 #};
-  system.stateVersion = "25.11"; 
+  system.stateVersion = "25.11";
 
 }
