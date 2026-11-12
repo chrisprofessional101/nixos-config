@@ -40,9 +40,9 @@
 
   home.packages = with pkgs; [
 
-    obsidian
+#    obsidian
     wezterm
-    vivaldi
+#    vivaldi
     neovim
     fastfetch
     krita
@@ -64,19 +64,19 @@
     # '')
   ];
 
-programs.zed-editor = {
-  enable = true;
-  extensions = [ "nix" "toml" "rust" ];
-  userSettings = {
-    theme = {
-      mode = "system";
-      dark = "One Dark";
-      light = "One Light";
-    };
-    hour_format = "hour24";
-    vim_mode = true;
-  };
-};
+#programs.zed-editor = {
+#  enable = true;
+#  extensions = [ "nix" "toml" "rust" ];
+#  userSettings = {
+#    theme = {
+#      mode = "system";
+#      dark = "One Dark";
+#      light = "One Light";
+#    };
+#    hour_format = "hour24";
+#    vim_mode = true;
+#  };
+#};
   #configs
 #  programs.niri.settings = {
 
