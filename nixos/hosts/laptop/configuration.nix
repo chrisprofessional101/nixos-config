@@ -13,7 +13,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.initrd.luks.devices."luks-5c5770fc-e41e-4f50-a1ec-29832b9d5050".device = "/dev/disk/by-uuid/5c5770fc-e41e-4f50-a1ec-29832b9d5050";
+# boot.initrd.luks.devices."luks-5c5770fc-e41e-4f50-a1ec-29832b9d5050".device = "/dev/disk/by-uuid/5c5770fc-e41e-4f50-a1ec-29832b9d5050";
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
   hardware.bluetooth.enable = true;
@@ -76,7 +76,7 @@
   };
 };
 
-  programs.firefox.enable = true;
+#  programs.firefox.enable = true;
 
   nixpkgs.config.allowUnfree = true;
 
